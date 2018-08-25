@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,20 +19,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ask Me Anything" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RlC-eY-6P3">
-                                <rect key="frame" x="16" y="74" width="288" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask Me Anything" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RlC-eY-6P3">
+                                <rect key="frame" x="16" y="68" width="288" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nW8-Pc-lhh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nW8-Pc-lhh">
                                 <rect key="frame" x="16" y="156" width="288" height="284"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8NA-Yg-nKQ">
-                                <rect key="frame" x="141" y="498" width="38" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8NA-Yg-nKQ">
+                                <rect key="frame" x="141" y="496" width="38" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="UZy-eO-tO2"/>
+                                    <constraint firstAttribute="width" constant="38" id="eDL-dK-8n8"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Ask"/>
                                 <connections>
@@ -40,6 +42,17 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nW8-Pc-lhh" firstAttribute="top" secondItem="RlC-eY-6P3" secondAttribute="bottom" constant="32" id="FF5-NY-Ntn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RlC-eY-6P3" secondAttribute="trailing" constant="16" id="Nhx-9N-yIN"/>
+                            <constraint firstItem="nW8-Pc-lhh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="PxA-RY-DDw"/>
+                            <constraint firstItem="RlC-eY-6P3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="R6b-b7-xSQ"/>
+                            <constraint firstItem="8NA-Yg-nKQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="125" id="Ysl-v3-CyB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8NA-Yg-nKQ" secondAttribute="bottom" constant="32" id="bJf-QO-Y1p"/>
+                            <constraint firstItem="RlC-eY-6P3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dZm-He-dlF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8NA-Yg-nKQ" secondAttribute="trailing" constant="125" id="ocJ-42-Led"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nW8-Pc-lhh" secondAttribute="trailing" constant="16" id="uSI-CW-4tE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
